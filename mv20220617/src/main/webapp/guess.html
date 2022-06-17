@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Guess Number</title>
+</head>
+<body>
+	猜一個數字(1-10) <br />
+	<input type="text" id="number" /><br />
+	<input type="button" id="submit" value="Guess" />
+	<div id="display"></div>
+	<script type="text/javascript">
+		function result(data,status){
+			alert(status);
+			$("#display").html(data);
+		}
+		
+		function send(){
+			var n=$("number").val();
+			$.post("Fortune.jsp",{"number":n},result);
+		}
+		
+		function start(){
+			$("#submit").click(send);
+		}
+		
+		$(document).ready(start);
+	</script>
+</body>
+</html>
