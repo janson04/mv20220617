@@ -12,12 +12,12 @@
 	<div id="display"></div>
 	<script type="text/javascript">
 		function result(data,status){
-			alert(status);
+			//alert(status);
 			$("#display").html(data);
 		}
 		
 		function send(){
-			var n=$("number").val();
+			var n=$("#number").val();
 			$.post("Fortune.jsp",{"number":n},result);
 		}
 		
