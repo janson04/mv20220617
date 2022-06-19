@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryMenu</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li><span id="workMenu" style="cursor: pointer">Works</span>
+			<ul>
+				<div id="myMenu">
+					<li><a href="#">Work 1</a></li>
+					<li><a href="#">Work 2</a></li>
+					<li><a href="#">Work 3</a></li>
+				</div>
+			</ul>
+		</li>
+		<li>Home</li>
+		<li>Travel</li>		
+	</ul>
+	<script type="text/javascript">
+		$(document).ready(
+			$("#workMenu").click(function(){
+				$("#myMenu").slideToggle()
+			})
+		)
+	</script>
+</body>
+</html>
